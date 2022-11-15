@@ -1,4 +1,4 @@
-### Zdravím tě 👋 Běž na https://ryslavyvaclav.github.io/i/ !
+### Zdravím tě 👋 Běž na <a href="https://ryslavyvaclav.github.io/i/">Můj nový web</a> !
 
 <!--
 **ryslavyvaclav/RyslavyVaclav** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
