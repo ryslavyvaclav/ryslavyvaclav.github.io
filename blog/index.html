@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Blog</title>
+<meta name="robots" content="max-image-preview:large">
+		<style id="material-css-variables">:root {
+				/* Theme color vars */
+				--mdc-theme-primary: #212121;
+				--mdc-theme-primary-rgb: 33,33,33;
+				--mdc-theme-on-primary: #fafafa;
+				--mdc-theme-on-primary-rgb: 250,250,250;
+				--mdc-theme-secondary: #263238;
+				--mdc-theme-secondary-rgb: 38,50,56;
+				--mdc-theme-on-secondary: #000000;
+				--mdc-theme-on-secondary-rgb: 0,0,0;
+				--mdc-theme-surface: #ffffff;
+				--mdc-theme-surface-rgb: 255,255,255;
+				--mdc-theme-on-surface: #000000;
+				--mdc-theme-on-surface-rgb: 0,0,0;
+				--mdc-theme-surface-mix-4: #f5f5f5;
+				--mdc-theme-surface-mix-12: #e0e0e0;
+
+				/* Icon collection type var */
+				--mdc-icons-font-family: "Material Icons Two Tone";
+
+				/* Typography vars */
+				--mdc-typography-headline1-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline2-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline3-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline4-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline5-font-family: "Roboto", sans-serif;
+				--mdc-typography-headline6-font-family: "Roboto", sans-serif;
+				--mdc-typography-subtitle1-font-family: "Roboto", sans-serif;
+				--mdc-typography-subtitle2-font-family: "Roboto", sans-serif;
+				--mdc-typography-font-family: "Roboto", sans-serif;
+				--mdc-typography-body1-font-family: "Roboto", sans-serif;
+				--mdc-typography-body2-font-family: "Roboto", sans-serif;
+				--mdc-typography-caption-font-family: "Roboto", sans-serif;
+				--mdc-typography-button-font-family: "Roboto", sans-serif;
+				--mdc-typography-overline-font-family: "Roboto", sans-serif;
+
+				/* Corner Styles vars */
+				--mdc-button-radius: 20px;
+				--mdc-card-radius: 24px;
+				--mdc-chip-radius: 16px;
+				--mdc-data-table-radius: 36px;
+				--mdc-image-list-radius: 24px;
+				--mdc-nav-drawer-radius: 36px;
+				--mdc-text-field-radius: 20px;
+			}
+
+			/* Forced dark mode */
+			body[data-color-scheme='dark'] {
+				--mdc-theme-primary: #212121;
+				--mdc-theme-primary-rgb: 33,33,33;
+				--mdc-theme-on-primary: #fafafa;
+				--mdc-theme-on-primary-rgb: 250,250,250;
+				--mdc-theme-secondary: #263238;
+				--mdc-theme-secondary-rgb: 38,50,56;
+				--mdc-theme-on-secondary: #fafafa;
+				--mdc-theme-on-secondary-rgb: 250,250,250;
+				--mdc-theme-surface: #121212;
+				--mdc-theme-surface-rgb: 18,18,18;
+				--mdc-theme-on-surface: #ffffff;
+				--mdc-theme-on-surface-rgb: 255,255,255;
+			}
+
+			/* Forced light mode */
+			body[data-color-scheme='light'] {
+				--mdc-theme-primary: #212121;
+				--mdc-theme-primary-rgb: 33,33,33;
+				--mdc-theme-on-primary: #fafafa;
+				--mdc-theme-on-primary-rgb: 250,250,250;
+				--mdc-theme-secondary: #263238;
+				--mdc-theme-secondary-rgb: 38,50,56;
+				--mdc-theme-on-secondary: #000000;
+				--mdc-theme-on-secondary-rgb: 0,0,0;
+				--mdc-theme-surface: #ffffff;
+				--mdc-theme-surface-rgb: 255,255,255;
+				--mdc-theme-on-surface: #000000;
+				--mdc-theme-on-surface-rgb: 0,0,0;
+				--mdc-theme-surface-mix-4: #f5f5f5;
+				--mdc-theme-surface-mix-12: #e0e0e0;
+			}
+		
+				@media (prefers-color-scheme: dark) {
+					:root {
+						--mdc-theme-primary: #212121;
+				--mdc-theme-primary-rgb: 33,33,33;
+				--mdc-theme-on-primary: #fafafa;
+				--mdc-theme-on-primary-rgb: 250,250,250;
+				--mdc-theme-secondary: #263238;
+				--mdc-theme-secondary-rgb: 38,50,56;
+				--mdc-theme-on-secondary: #fafafa;
+				--mdc-theme-on-secondary-rgb: 250,250,250;
+				--mdc-theme-surface: #121212;
+				--mdc-theme-surface-rgb: 18,18,18;
+				--mdc-theme-on-surface: #ffffff;
+				--mdc-theme-on-surface-rgb: 255,255,255;
+					}
+				}</style>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title=" &raquo; RSS zdroj" href="https://ryslavyvaclav.github.io/feed/">
+<link rel="alternate" type="application/rss+xml" title=" &raquo; RSS komentářů" href="https://ryslavyvaclav.github.io/comments/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ryslavyvaclav.github.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://ryslavyvaclav.github.io/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://ryslavyvaclav.github.io/wp-includes/css/classic-themes.min.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="material-google-fonts-cdn-css" href="//fonts.googleapis.com/css?family=Material+Icons+Two+Tone%7CRoboto%3A100%2C400%2C500%7CRoboto%3A400%2C500&#038;ver=0.6.0" type="text/css" media="all">
+<link rel="stylesheet" id="material-design-google-style-css" href="https://ryslavyvaclav.github.io/wp-content/themes/material-design-google/style.css?ver=0.6.0" type="text/css" media="all">
+<style id="material-design-google-style-inline-css" type="text/css">:root {
+			--mdc-theme-background: #ffffff;
+			--mdc-theme-background-rgb: 255,255,255;
+			--mdc-theme-on-background: #000000;
+			--mdc-theme-on-background-rgb: 0,0,0;
+			--mdc-theme-footer: #ffffff;
+			--mdc-theme-footer-rgb: 255,255,255;
+			--mdc-theme-on-footer: #000000;
+			--mdc-theme-on-footer-rgb: 0,0,0;
+		}
+
+		/* Forced dark mode */
+		body[data-color-scheme='dark'] {
+			--mdc-theme-background: #121212;
+			--mdc-theme-background-rgb: 18,18,18;
+			--mdc-theme-on-background: #ffffff;
+			--mdc-theme-on-background-rgb: 255,255,255;
+		}
+
+		/* Forced light mode */
+		body[data-color-scheme='light'] {
+			--mdc-theme-background: #ffffff;
+			--mdc-theme-background-rgb: 255,255,255;
+			--mdc-theme-on-background: #000000;
+			--mdc-theme-on-background-rgb: 0,0,0;
+			--mdc-theme-footer: #ffffff;
+			--mdc-theme-footer-rgb: 255,255,255;
+			--mdc-theme-on-footer: #000000;
+			--mdc-theme-on-footer-rgb: 0,0,0;
+		}
+	
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--mdc-theme-background: #121212;
+			--mdc-theme-background-rgb: 18,18,18;
+			--mdc-theme-on-background: #ffffff;
+			--mdc-theme-on-background-rgb: 255,255,255;
+				}
+			}</style>
+<link rel="stylesheet" id="material-design-google-front-end-css-css" href="https://ryslavyvaclav.github.io/wp-content/themes/material-design-google/assets/css/front-end-compiled.min.css?ver=0.6.0" type="text/css" media="all">
+<link rel="stylesheet" id="material-front-end-css-css" href="https://ryslavyvaclav.github.io/wp-content/plugins/material-design/assets/css/front-end-compiled.css?ver=0.6.0" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://ryslavyvaclav.github.io/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ryslavyvaclav.github.io/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://ryslavyvaclav.github.io/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<meta name="material-design-plugin" content="v0.6.0">
+<meta name="material-design-google-theme" content="v0.6.0">		<style type="text/css" id="wp-custom-css">.home .entry-title { display: none; }</style>
+		</head>
+
+<body class="blog mdc-typography hfeed no-sidebar">
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		
+<aside class="mdc-drawer material-drawer mdc-drawer--modal">
+	<div class="mdc-drawer__header">
+		
+		<div class="mdc-drawer__title">
+				<div class="site-title__wrapper">
+		<div class="site-title__row">
+			<div class="site-title mdc-typography mdc-typography--headline6">
+				<a href="https://ryslavyvaclav.github.io/" rel="home"></a>
+			</div>
+
+			<button type="button" class="mdc-icon-button mdc-drawer__close">
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+				<span class="screen-reader-text">Close drawer</span>
+			</button>
+		</div>
+		<div class="site-tagline mdc-typography--subtitle1"></div>
+	</div>
+			</div>
+	</div>
+	<div class="mdc-drawer__content">
+		
+<form class="search-form" action="http://localhost/ryslavyvaclav.github.io/" method="get" role="search" id="search-63749f35109ce">
+	<label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
+		<input class="mdc-text-field__input" type="text" aria-labelledby="search-label-63749f35109d0" name="s" value="">
+		<i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">search</i>
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+			<span class="mdc-floating-label" id="search-label-63749f35109d0">Search</span>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</label>
+</form>
+
+		<nav class="mdc-list mdc-drawer__list" role="listbox">
+			<a href="https://ryslavyvaclav.github.io/" class="mdc-list-item"><span class="mdc-list-item__text">Home</span></a>
+<a href="https://ryslavyvaclav.github.io/about/" class="mdc-list-item"><span class="mdc-list-item__text">About</span></a>
+<a href="https://ryslavyvaclav.github.io/projects/" class="mdc-list-item"><span class="mdc-list-item__text">Projects</span></a>
+<a href="https://ryslavyvaclav.github.io/blog/" class="mdc-list-item mdc-list-item--activated"><span class="mdc-list-item__text">Blog</span></a>
+<a href="https://ryslavyvaclav.github.io/contact/" class="mdc-list-item"><span class="mdc-list-item__text">Contact</span></a>
+		</nav>
+	</div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>
+
+		
+<div class="
+		site__navigation
+					-has-tab-bar
+				" role="banner">
+	
+<div class="mdc-top-app-bar top-app-bar mdc-top-app-bar--fixed">
+	<div class="mdc-top-app-bar__row top-app-bar__header">
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger">menu</button>
+
+						<span class="mdc-top-app-bar__title top-app-bar__title">
+					<div class="site-title__wrapper">
+		<div class="site-title__row">
+			<div class="site-title mdc-typography mdc-typography--headline6">
+				<a href="https://ryslavyvaclav.github.io/" rel="home"></a>
+			</div>
+
+			<button type="button" class="mdc-icon-button mdc-drawer__close">
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+				<span class="screen-reader-text">Close drawer</span>
+			</button>
+		</div>
+		<div class="site-tagline mdc-typography--subtitle1"></div>
+	</div>
+				</span>
+		</section>
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
+							<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button search__button" aria-label="Search">
+					<span class="mdc-button__ripple"></span>
+					search
+				</button>
+			
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button dark-mode__button" aria-label="Toggle Dark Mode">
+				<span class="mdc-button__ripple"></span>
+				<span class="dark-mode__icon">dark_mode</span>
+			</button>
+		</section>
+	</div>
+
+	<div class="mdc-top-app-bar__row top-app-bar__search">
+		
+<form class="search-form" action="http://localhost/ryslavyvaclav.github.io/" method="get" id="search-63749f3512eea">
+	<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
+		<div class="mdc-text-field__ripple"></div>
+		<input class="mdc-text-field__input" placeholder="Search the site" aria-label="Search" type="search" name="s">
+	</div>
+	<button class="mdc-button mdc-button--unelevated button__search" type="submit">
+		<span class="mdc-button__ripple"></span>
+		<span class="mdc-button__label">Search</span>
+	</button>
+	<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-button--unelevated button__back" type="button" aria-label="Exit search form">
+		<span class="mdc-button__ripple"></span>
+		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+	</button>
+</form>
+	</div>
+
+	
+<div class="tab-bar__wrap">
+	<div class="mdc-tab-bar tab-bar" role="tablist">
+		<div class="mdc-tab-scroller">
+			<div class="mdc-tab-scroller__scroll-area">
+				<div class="mdc-tab-scroller__scroll-content">
+					<a href="https://ryslavyvaclav.github.io/" class="mdc-tab">		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Home</span>
+		</span>
+
+		<span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		</a><a href="https://ryslavyvaclav.github.io/about/" class="mdc-tab">		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label">About</span>
+		</span>
+
+		<span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		</a><a href="https://ryslavyvaclav.github.io/projects/" class="mdc-tab">		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Projects</span>
+		</span>
+
+		<span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		</a><a href="https://ryslavyvaclav.github.io/blog/" class="mdc-tab mdc-tab--active" aria-selected="true">		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Blog</span>
+		</span>
+
+		<span class="mdc-tab-indicator
+			mdc-tab-indicator--active		">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		</a><a href="https://ryslavyvaclav.github.io/contact/" class="mdc-tab">		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Contact</span>
+		</span>
+
+		<span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		</a>				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+		<div id="content" class="site-content">
+
+	<div id="primary" class="content-area material-archive__wide">
+		<main id="main" class="site-main">
+
+						<header>
+					<h1 class="page-title screen-reader-text">Blog</h1>
+				</header>
+				
+				<div class="site-main__inner">
+					
+<div class="archive-cards masonry-grid-theme layout-masonry-3">
+	
+<div class="post-card__container">
+	<div id="1" class="mdc-card post-card mdc-card--outlined post-1 post type-post status-publish format-standard hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2022/11/16/ahoj-vsichni/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Ahoj všichni!</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">16 listopadu, 2022</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Vítejte ve WordPressu. Toto je váš první příspěvek. Můžete ho upravit, nebo smazat a postupně pak začít s tvorbou vlastního webu.</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2022/11/16/ahoj-vsichni/#comments" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							One Comment						</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+<div class="post-card__container">
+	<div id="14" class="mdc-card post-card mdc-card--outlined post-14 post type-post status-publish format-standard has-post-thumbnail hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2020/05/06/suspendisse-morbi-pretium/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+									<div class="mdc-card__media mdc-card__media--16-9 post-card__media">
+						<img width="1200" height="420" src="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1536421629999-fc4bfa98a8bc.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1536421629999-fc4bfa98a8bc.jpeg 1200w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1536421629999-fc4bfa98a8bc-300x105.jpeg 300w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1536421629999-fc4bfa98a8bc-1024x358.jpeg 1024w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1536421629999-fc4bfa98a8bc-768x269.jpeg 768w" sizes="(max-width: 1200px) 100vw, 1200px">					</div>
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Suspendisse morbi pretium</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">6 května, 2020</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Eu donec in etiam ornare integer nam torquent ut, duis convallis semper proin vulputate arcu viverra nibh lectus, aliquet cras rutrum interdum phasellus suspendisse eleifend faucibus, magnis neque tempor adipiscing mus sollicitudin luctus. Sodales non eu taciti rutrum ultrices dapibus ipsum pharetra, massa integer cras varius ante augue tortor ultricies iaculis, a congue laoreet facilisi [&hellip;]</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2020/05/06/suspendisse-morbi-pretium/#respond" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							0 Comments						</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+<div class="post-card__container">
+	<div id="12" class="mdc-card post-card mdc-card--outlined post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2020/05/06/finibus-ornare-nascetur/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+									<div class="mdc-card__media mdc-card__media--16-9 post-card__media">
+						<img width="1200" height="420" src="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314912546-0d18918fdc8f.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314912546-0d18918fdc8f.jpeg 1200w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314912546-0d18918fdc8f-300x105.jpeg 300w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314912546-0d18918fdc8f-1024x358.jpeg 1024w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314912546-0d18918fdc8f-768x269.jpeg 768w" sizes="(max-width: 1200px) 100vw, 1200px">					</div>
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Finibus ornare nascetur</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">6 května, 2020</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Turpis nascetur blandit commodo tincidunt est per ornare augue metus enim in pharetra mattis mus, class molestie vestibulum penatibus curabitur quisque etiam semper suspendisse egestas iaculis himenaeos. Himenaeos etiam fermentum eleifend malesuada maximus cras suscipit platea conubia, sapien dictumst ad litora accumsan semper proin enim, feugiat turpis venenatis nullam blandit est dui tellus. Eu purus [&hellip;]</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2020/05/06/finibus-ornare-nascetur/#respond" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							0 Comments						</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+<div class="post-card__container">
+	<div id="10" class="mdc-card post-card mdc-card--outlined post-10 post type-post status-publish format-standard has-post-thumbnail hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2020/05/06/inceptos-penatibus-habitasse/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+									<div class="mdc-card__media mdc-card__media--16-9 post-card__media">
+						<img width="1200" height="420" src="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314906922-91070d30bf77.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314906922-91070d30bf77.jpeg 1200w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314906922-91070d30bf77-300x105.jpeg 300w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314906922-91070d30bf77-1024x358.jpeg 1024w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1565314906922-91070d30bf77-768x269.jpeg 768w" sizes="(max-width: 1200px) 100vw, 1200px">					</div>
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Inceptos penatibus habitasse</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">6 května, 2020</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Lobortis nullam et euismod efficitur adipiscing dictum dui vestibulum aenean porta, hac primis feugiat blandit class erat nec elit. Ipsum duis eleifend at feugiat ac est auctor, sollicitudin maximus facilisis lorem varius semper, litora natoque suspendisse netus phasellus libero. Sollicitudin rutrum mattis ad et in nostra feugiat sit imperdiet tellus ex, suspendisse orci ligula scelerisque [&hellip;]</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2020/05/06/inceptos-penatibus-habitasse/#respond" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							0 Comments						</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+<div class="post-card__container">
+	<div id="8" class="mdc-card post-card mdc-card--outlined post-8 post type-post status-publish format-standard has-post-thumbnail hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2020/05/06/magna-ligula-suspendisse/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+									<div class="mdc-card__media mdc-card__media--16-9 post-card__media">
+						<img width="1200" height="420" src="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1566964423430-3e52903303a5.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1566964423430-3e52903303a5.jpeg 1200w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1566964423430-3e52903303a5-300x105.jpeg 300w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1566964423430-3e52903303a5-1024x358.jpeg 1024w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1566964423430-3e52903303a5-768x269.jpeg 768w" sizes="(max-width: 1200px) 100vw, 1200px">					</div>
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Magna ligula suspendisse</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">6 května, 2020</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Lectus curabitur lacinia vulputate scelerisque ridiculus tristique quam at facilisis facilisi, ex id cubilia rhoncus nibh luctus tincidunt amet condimentum dapibus, duis nascetur tortor natoque egestas varius sed et risus. Cras suspendisse risus facilisis mollis nam nostra proin, ultrices erat rhoncus eleifend vestibulum lobortis dapibus, non conubia nisi potenti torquent commodo. Sagittis in vivamus penatibus [&hellip;]</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2020/05/06/magna-ligula-suspendisse/#respond" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							0 Comments						</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+<div class="post-card__container">
+	<div id="6" class="mdc-card post-card mdc-card--outlined post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-nezarazene">
+		<a class="mdc-card__link" href="https://ryslavyvaclav.github.io/2020/05/06/nunc-lacinia-libero-eu-pulvinar-aliquet/">
+			<div class="mdc-card__primary-action post-card__primary-action">
+									<div class="mdc-card__media mdc-card__media--16-9 post-card__media">
+						<img width="1200" height="420" src="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1574191942747-140df1f9c477.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1574191942747-140df1f9c477.jpeg 1200w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1574191942747-140df1f9c477-300x105.jpeg 300w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1574191942747-140df1f9c477-1024x358.jpeg 1024w, https://ryslavyvaclav.github.io/wp-content/uploads/2022/11/material-demo-photo-1574191942747-140df1f9c477-768x269.jpeg 768w" sizes="(max-width: 1200px) 100vw, 1200px">					</div>
+								<div class="post-card__primary">
+											<h2 class="post-card__title mdc-typography mdc-typography--headline6">Nunc lacinia libero eu pulvinar aliquet</h2>					
+											<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2">6 května, 2020</time>
+									</div>
+									<div class="post-card__secondary mdc-typography mdc-typography--body2">
+<p>Sesd malesuada massa vehicula molestie eu efficitur montes cubilia tincidunt maecenas, platea metus elementum nisl nulla mollis arcu tellus litora integer, at ullamcorper tempus magnis nullam ac ut ipsum tempor. Habitant cursus habitasse pellentesque felis sed egestas aptent vitae, nunc pharetra himenaeos purus leo ridiculus pretium, primis enim ac lacus dictum eget elementum. Penatibus curae [&hellip;]</p>
+</div>
+							</div>
+		</a>
+					<div class="mdc-card__actions">
+				<div class="mdc-card__action-buttons">
+											<a class="mdc-button mdc-card__action mdc-card__action--button" href="https://ryslavyvaclav.github.io/author/admin/" aria-label="
+								Author: admin							">
+							<span class="mdc-button__ripple"></span>
+							<img alt="" src="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=18&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/fec3715a69cdc1ac1d119b571ebe2d2e?s=36&#038;d=mm&#038;r=g 2x" class="avatar avatar-18 photo" height="18" width="18" loading="lazy" decoding="async">							admin						</a>
+					
+											<a href="https://ryslavyvaclav.github.io/2020/05/06/nunc-lacinia-libero-eu-pulvinar-aliquet/#comments" class="mdc-button mdc-card__action mdc-card__action--button">
+							<span class="mdc-button__ripple"></span>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
+							3 Comments						</a>
+									</div>
+			</div>
+			</div>
+</div>
+</div>
+				</div>
+
+			
+		</main><!-- #main -->
+	</div>
+<!-- #primary -->
+
+	
+	</div>
+<!-- #content -->
+
+</div>
+<!-- #page -->
+
+<footer class="site-footer">
+	
+	<div id="colophon" class="mdc-layout-grid site-footer__inner">
+		<div class="mdc-layout-grid__inner">
+			<div class="site-footer__copyright mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+				<small class="site-footer__text mdc-typography--subtitle2"></small>
+			</div>
+
+			
+<div class="back-to-top mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+	<button id="back-to-top" class="mdc-button" aria-label="Back to Top">
+		<div class="mdc-button__ripple"></div>
+		<i class="material-icons mdc-icon-button__icon">expand_less</i>
+	</button>
+</div>
+		</div>
+	</div>
+<!-- #colophon -->
+</footer>
+
+<script type="text/javascript" src="https://ryslavyvaclav.github.io/wp-content/themes/material-design-google/assets/js/front-end.min.js?ver=0.6.0" id="material-design-google-js-js"></script>
+<script type="text/javascript" id="material-front-end-js-js-extra">
+/* <![CDATA[ */
+var materialDesign = {"ajax_url":"https:\/\/ryslavyvaclav.github.io\/wp-admin\/admin-ajax.php","darkModeStatus":"auto","globalStyle":[],"isMaterialThemeActive":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ryslavyvaclav.github.io/wp-content/plugins/material-design/assets/js/front-end.js?ver=0.6.0" id="material-front-end-js-js"></script>
+
+</body>
+</html>
