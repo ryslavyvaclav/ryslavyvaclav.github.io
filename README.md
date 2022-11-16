@@ -1,5 +1,7 @@
 ### Zdravím tě 👋 Běž na <a href="https://ryslavyvaclav.github.io/i/">Můj nový web</a> !
 
+<a rel="me" href="https://mastodon.social/@ryslavy">Mastodon</a>
+
 <!--
 **ryslavyvaclav/RyslavyVaclav** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
