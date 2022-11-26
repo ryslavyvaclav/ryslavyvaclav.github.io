@@ -251,6 +251,20 @@
         ],
         "category": "handwriting"
     },
+    "Alexandria": {
+        "variants": [
+            "100",
+            "200",
+            "300",
+            "regular",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900"
+        ],
+        "category": "sans-serif"
+    },
     "Alfa Slab One": {
         "variants": [
             "regular"
@@ -854,19 +868,33 @@
     },
     "Asap": {
         "variants": [
+            "100",
+            "200",
+            "300",
             "regular",
             "500",
             "600",
             "700",
+            "800",
+            "900",
+            "100italic",
+            "200italic",
+            "300italic",
             "italic",
             "500italic",
             "600italic",
-            "700italic"
+            "700italic",
+            "800italic",
+            "900italic"
         ],
         "category": "sans-serif"
     },
     "Asap Condensed": {
         "variants": [
+            "200",
+            "200italic",
+            "300",
+            "300italic",
             "regular",
             "italic",
             "500",
@@ -874,7 +902,11 @@
             "600",
             "600italic",
             "700",
-            "700italic"
+            "700italic",
+            "800",
+            "800italic",
+            "900",
+            "900italic"
         ],
         "category": "sans-serif"
     },
@@ -2274,13 +2306,23 @@
     },
     "Chivo": {
         "variants": [
+            "100",
+            "200",
             "300",
-            "300italic",
             "regular",
-            "italic",
+            "500",
+            "600",
             "700",
-            "700italic",
+            "800",
             "900",
+            "100italic",
+            "200italic",
+            "300italic",
+            "italic",
+            "500italic",
+            "600italic",
+            "700italic",
+            "800italic",
             "900italic"
         ],
         "category": "sans-serif"
@@ -3422,7 +3464,14 @@
             "600",
             "700",
             "800",
-            "900"
+            "900",
+            "300italic",
+            "italic",
+            "500italic",
+            "600italic",
+            "700italic",
+            "800italic",
+            "900italic"
         ],
         "category": "sans-serif"
     },
@@ -8701,6 +8750,15 @@
             "700",
             "800",
             "900"
+        ],
+        "category": "serif"
+    },
+    "Noto Serif Khojki": {
+        "variants": [
+            "regular",
+            "500",
+            "600",
+            "700"
         ],
         "category": "serif"
     },

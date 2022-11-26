@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-12 17:43:13+0000\n"
+"PO-Revision-Date: 2022-11-22 21:18:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -285,6 +285,11 @@ msgstr "Leden"
 msgid "Uncategorized"
 msgstr "Nezařazené"
 
+#. translators: %s: plugins_loaded
+#: wp-includes/class-wp-user-query.php:784
+msgid "User queries should not be run before the %s hook."
+msgstr "Uživatelské dotazy by neměly být spouštěny před háčkem %s."
+
 #. translators: %s: The '$value' argument.
 #: wp-includes/class-wp-block-type.php:364
 msgid "The %s argument must be a string or a string array."
@@ -293,6 +298,10 @@ msgstr "Argument %s musí být buď řetězec nebo pole řetězců."
 #: wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:215
 msgid "Sorry, you are not allowed to view terms for this post."
 msgstr "Nemáte dostatečné oprávnění pro zobrazení podmínek pro tento příspěvek."
+
+#: wp-includes/block-supports/typography.php:301
+msgid "Raw size value must be a string, integer, or float."
+msgstr "Nezpracovaná hodnota velikosti musí být řetězec, celé číslo nebo číslo s plovoucí desetinnou čárkou."
 
 #: wp-includes/blocks/list-item/block.json
 msgctxt "block description"
@@ -349,13 +358,26 @@ msgstr[2] "%s komentářů"
 msgid "Create a site or only a username:"
 msgstr "Vytvořte web nebo pouze uživatelské jméno:"
 
+#: wp-signup.php:120
+msgid "Site Domain (subdomain only):"
+msgstr "Doména webu (pouze subdoména):"
+
 #: wp-signup.php:118
 msgid "Site Name (subdirectory only):"
 msgstr "Název stránky (pouze podadresář):"
 
+#. translators: %s: wp-config.php
+#: wp-load.php:90
+msgid "There doesn't seem to be a %s file. It is needed before the installation can continue."
+msgstr "Zdá se, že neexistuje soubor %s. Je ho třeba před pokračováním v instalaci."
+
 #: wp-includes/user.php:4995
 msgid "The date and time the preferences were updated."
 msgstr "Předvolby data a času byly upraveny."
+
+#: wp-includes/theme.php:4039
+msgid "Whether the theme disables generated layout styles."
+msgstr "Zda motiv zakáže generované styly rozvržení."
 
 #: wp-includes/theme.php:3849
 msgid "Whether a theme uses block-based template parts."
@@ -369,9 +391,49 @@ msgstr "$store musí být instancí třídy WP_Style_Engine_CSS_Rules_Store"
 msgid "Revisions not enabled."
 msgstr "Revize nejsou zapnuty."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:89
+msgid "The template prefix for the created template. This is used to extract the main template type, e.g. in `taxonomy-books` extracts the `taxonomy`"
+msgstr "Předpona šablony pro vytvořenou šablonu. To se používá k extrahování hlavního typu šablony, např. v `taxonomy-books` extrahuje `taxonomy`"
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:85
+msgid "Indicates if a template is custom or part of the template hierarchy"
+msgstr "Označuje, zda je šablona vlastní nebo je součástí hierarchie šablon"
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:80
+msgid "The slug of the template to get the fallback for"
+msgstr "Zjednodušený název šablony, pro kterou lze získat záložní řešení"
+
 #: wp-includes/rest-api/endpoints/class-wp-rest-post-types-controller.php:404
 msgid "The icon for the post type."
 msgstr "Ikona typu příspěvku."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-post-types-controller.php:361
+msgid "If the value is a string, the value will be used as the archive slug. If the value is false the post type has no archive."
+msgstr "Pokud je hodnotou řetězec, bude tato hodnota použita jako archivní název v URL. Pokud je hodnota neplatná, typ příspěvku nemá žádný archiv."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:731
+msgid "Public facing and editor style handle. DEPRECATED: Use `style_handles` instead."
+msgstr "Veřejný vzhled a úprava stylu v editoru. ZASTARALÉ: Místo toho použijte `style_handles`."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:724
+msgid "Editor style handle. DEPRECATED: Use `editor_style_handles` instead."
+msgstr "Úprava stylu editorem. ZASTARALÉ: Místo toho použijte `editor_style_handles`."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:717
+msgid "Public facing script handle. DEPRECATED: Use `view_script_handles` instead."
+msgstr "Veřejná úprava skriptu. ZASTARALÉ: Místo toho použijte `view_script_handles`."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:710
+msgid "Public facing and editor script handle. DEPRECATED: Use `script_handles` instead."
+msgstr "Veřejné prostředí a editor skriptu. ZASTARALÉ: Místo toho použijte `script_handles`."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:703
+msgid "Editor script handle. DEPRECATED: Use `editor_script_handles` instead."
+msgstr "Úprava skriptu editorem. ZASTARALÉ: Místo toho použijte `editor_script_handles`."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:190
+msgid "An array of post types that the pattern is restricted to be used with."
+msgstr "Pole typů příspěvků, pro které je použití vzoru omezeno."
 
 #. translators: 1: $args, 2: The REST API route being registered.
 #: wp-includes/rest-api.php:113
@@ -384,6 +446,15 @@ msgstr "REST API %1$s by mělo být pole polí. Jiná hodnota detekována pro %2
 msgctxt "file"
 msgid "Add New"
 msgstr "Přidat nový"
+
+#: wp-includes/ms-load.php:475
+msgid "If you are the owner of this network please check that your host&#8217;s database server is running properly and all tables are error free."
+msgstr "Pokud jste vlastníkem této sítě, zkontrolujte prosím, zda databázový server vašeho poskytovatele běží správně a všechny tabulky jsou bez chyb."
+
+#. translators: 1: VHOST, 2: SUBDOMAIN_INSTALL
+#: wp-includes/ms-default-constants.php:151
+msgid "<strong>Conflicting values for the constants %1$s and %2$s.</strong> The value of %2$s will be assumed to be your subdomain configuration setting."
+msgstr "<strong>Konfliktní hodnoty pro konstanty %1$s a %2$s.</strong> Hodnota %2$s bude považována za vaše nastavení konfigurace subdomény."
 
 #. translators: Character to identify required form fields.
 #: wp-includes/general-template.php:5175
@@ -405,6 +476,16 @@ msgstr "%sX-L"
 msgid "%sX-Small"
 msgstr "%sX-S"
 
+#: wp-includes/class-wp-theme-json.php:3052
+msgid "Some of the theme.json settings.spacing.spacingScale values are invalid"
+msgstr "Některé hodnoty theme.json settings.spacing.spacingScale jsou neplatné"
+
+#. translators: 1: theme.json, 2: Value name, 3: Value path, 4: Another value
+#. name.
+#: wp-includes/class-wp-theme-json.php:1774
+msgid "Your %1$s file uses a dynamic value (%2$s) for the path at %3$s. However, the value at %3$s is also a dynamic value (pointing to %4$s) and pointing to another dynamic value is not supported. Please update %3$s to point directly to %4$s."
+msgstr "Váš soubor %1$s používá dynamickou hodnotu (%2$s) pro cestu v %3$s. Hodnota v %3$s je však také dynamická hodnota (odkazující na %4$s) a odkazování na jinou dynamickou hodnotu není podporováno. Aktualizujte prosím %3$s, aby odkazoval přímo na %4$s."
+
 #. translators: This string should only be translated if wp-config-sample.php
 #. is localized. You can check the localized release package or
 #. https://i18n.svn.wordpress.org/<locale code>/branches/<wp
@@ -413,6 +494,55 @@ msgstr "%sX-S"
 #: wp-includes/pluggable.php:2413 wp-admin/maint/repair.php:48
 msgid "put your unique phrase here"
 msgstr "vložte svou unikátní frázi zde"
+
+#. translators: %s: The type of the given cache key.
+#: wp-includes/class-wp-object-cache.php:159
+msgid "Cache key must be integer or non-empty string, %s given."
+msgstr "Klíč mezipaměti musí být celé číslo nebo neprázdný řetězec, zadáno %s."
+
+#: wp-includes/class-wp-object-cache.php:157
+msgid "Cache key must not be an empty string."
+msgstr "Klíč mezipaměti nesmí být prázdný řetězec."
+
+#: wp-includes/class-wp-fatal-error-handler.php:189
+msgid "There has been a critical error on this website. Please reach out to your site administrator, and inform them of this error for further assistance."
+msgstr "Na tomto webu došlo ke kritické chybě. Obraťte se prosím na správce svého webu a informujte ho o této chybě, aby vám pomohl."
+
+#. translators: %s: Capability name.
+#: wp-includes/capabilities.php:439
+msgid "When checking for the %s capability, you must always check it against a specific user."
+msgstr "Při kontrole schopnosti %s ji musíte vždy porovnat s konkrétním uživatelem."
+
+#. translators: %s: Capability name.
+#: wp-includes/capabilities.php:436 wp-includes/capabilities.php:703
+msgid "When checking for the %s capability, you must always check it against a specific term."
+msgstr "Při kontrole schopnosti %s ji musíte vždy porovnat s konkrétním výrazem."
+
+#. translators: %s: Capability name.
+#: wp-includes/capabilities.php:433 wp-includes/capabilities.php:549
+msgid "When checking for the %s capability, you must always check it against a specific comment."
+msgstr "Při kontrole schopnosti %s ji musíte vždy zkontrolovat podle konkrétního komentáře."
+
+#. translators: %s: Capability name.
+#: wp-includes/capabilities.php:82 wp-includes/capabilities.php:185
+#: wp-includes/capabilities.php:284
+msgid "When checking for the %s capability, you must always check it against a specific page."
+msgstr "Při kontrole schopnosti %s ji musíte vždy zkontrolovat na konkrétní stránce."
+
+#. translators: %s: Capability name.
+#: wp-includes/capabilities.php:79 wp-includes/capabilities.php:182
+#: wp-includes/capabilities.php:281 wp-includes/capabilities.php:374
+#: wp-includes/capabilities.php:430
+msgid "When checking for the %s capability, you must always check it against a specific post."
+msgstr "Při kontrole schopnosti %s ji musíte vždy zkontrolovat u konkrétního příspěvku."
+
+#: wp-includes/cache-compat.php:176
+msgid "Your object cache implementation does not support flushing individual groups."
+msgstr "Vaše implementace mezipaměti objektů nepodporuje vyprázdnění jednotlivých skupin."
+
+#: wp-includes/cache-compat.php:144
+msgid "Your object cache implementation does not support flushing the in-memory runtime cache."
+msgstr "Vaše implementace mezipaměti objektů nepodporuje vyprázdnění mezipaměti za běhu paměti."
 
 #. translators: %s: taxonomy's label
 #: wp-includes/blocks/post-terms.php:82
@@ -457,6 +587,16 @@ msgstr "Jediný"
 msgctxt "Block pattern category"
 msgid "Footers"
 msgstr "Zápatí"
+
+#. translators: 1: Hook name, 2: Error code, 3: Error message, 4: Event data.
+#: wp-cron.php:159
+msgid "Cron unschedule event error for hook: %1$s, Error code: %2$s, Error message: %3$s, Data: %4$s"
+msgstr "Chyba neplánované události Cron pro kotvu: %1$s, Kód chyby: %2$s, Chybová zpráva: %3$s, Data: %4$s"
+
+#. translators: 1: Hook name, 2: Error code, 3: Error message, 4: Event data.
+#: wp-cron.php:132
+msgid "Cron reschedule event error for hook: %1$s, Error code: %2$s, Error message: %3$s, Data: %4$s"
+msgstr "Chyba přeplánované události Cron pro kotvu: %1$s, Kód chyby: %2$s, Chybová zpráva: %3$s, Data: %4$s"
 
 #: wp-includes/theme.php:3842
 msgid "Whether a theme uses block-based templates."
@@ -855,6 +995,10 @@ msgstr "Světlý"
 msgctxt "color scheme"
 msgid "Dark"
 msgstr "Tmavý"
+
+#: wp-includes/class-wp-theme.php:289
+msgid "<strong>Error:</strong> The themes directory is either empty or does not exist. Please check your installation."
+msgstr "<strong>Chyba:</strong> Adresář šablon je buď prázdný, nebo neexistuje. Zkontrolujte prosím svou instalaci."
 
 #: wp-includes/class-wp-image-editor-gd.php:92
 #: wp-includes/class-wp-image-editor-gd.php:101

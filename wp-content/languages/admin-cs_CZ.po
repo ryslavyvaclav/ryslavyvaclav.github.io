@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-08 08:25:10+0000\n"
+"PO-Revision-Date: 2022-11-22 21:19:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,6 +43,10 @@ msgstr "Europe/Prague"
 msgid "Continue"
 msgstr "Pokračovat"
 
+#: wp-admin/includes/theme.php:335
+msgid "Site Editor"
+msgstr "Úprava webu"
+
 #: wp-admin/about.php:487
 msgid "https://wordpress.org/plugins/performance-lab/"
 msgstr "https://wordpress.org/plugins/performance-lab/"
@@ -50,6 +54,10 @@ msgstr "https://wordpress.org/plugins/performance-lab/"
 #: wp-admin/about.php:427
 msgid "Filters for all your styles"
 msgstr "Filtry pro všechny styly"
+
+#: wp-admin/about.php:322
+msgid "Other notes of interest"
+msgstr "Další zajímavosti"
 
 #: wp-admin/about.php:304
 msgid "Improved admin and editor accessibility"
@@ -67,9 +75,37 @@ msgstr "Menu se nyní jednodušeji spravují a vytváří"
 msgid "https://developer.wordpress.org/apis/wp-config-php/#wp-environment-type"
 msgstr "https://developer.wordpress.org/apis/wp-config-php/#wp-environment-type"
 
+#: wp-admin/theme-install.php:204
+msgctxt "themes"
+msgid "Block Themes"
+msgstr "Blokové šablony"
+
 #: wp-admin/theme-install.php:157
 msgid "<a href=\"https://wordpress.org/support/article/block-themes/\">Documentation on Block Themes</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/block-themes/\">Dokumentace k blokovým šablonám (Anglicky)</a>"
+
+#: wp-admin/theme-install.php:149
+msgid "Block themes"
+msgstr "Blokové šablony"
+
+#. translators: %s: wp-config.php
+#: wp-admin/setup-config.php:418
+msgid "Configuration rules for %s:"
+msgstr "Konfigurační pravidla pro %s:"
+
+#. translators: %s: Number of critical Site Health checks.
+#: wp-admin/menu.php:383
+msgid "Site Health %s"
+msgstr "Zdraví webu %s"
+
+#. translators: %s: The minimum recommended PHP version.
+#: wp-admin/includes/dashboard.php:1872
+msgid "The minimum recommended version of PHP is %s."
+msgstr "Minimální doporučená verze PHP je %s."
+
+#: wp-admin/includes/class-wp-site-health.php:2635
+msgid "Page cache"
+msgstr "Mezipaměť stránky"
 
 #. translators: Localized Support reference.
 #: wp-admin/includes/class-wp-site-health.php:2433
@@ -80,9 +116,31 @@ msgstr "https://wordpress.org/support/article/optimization/#persistent-object-ca
 msgid "https://wordpress.org/support/article/optimization/#Caching"
 msgstr "https://wordpress.org/support/article/optimization/#Caching"
 
+#. translators: 1: The WordPress error code. 2: The WordPress error message.
+#. translators: 1: The WordPress error code. 2: The HTTP status code error
+#. message.
+#: wp-admin/includes/class-wp-site-health.php:2102
+#: wp-admin/includes/class-wp-site-health.php:2122
+msgid "REST API Response: (%1$s) %2$s"
+msgstr "REST API odezva: (%1$s) %2$s"
+
+#. translators: %s: The REST API URL.
+#: wp-admin/includes/class-wp-site-health.php:2097
+#: wp-admin/includes/class-wp-site-health.php:2117
+msgid "REST API Endpoint: %s"
+msgstr "REST API Koncový bod: %s"
+
 #: wp-admin/includes/class-wp-site-health.php:787
 msgid "Requirements"
 msgstr "Požadavky"
+
+#: wp-admin/includes/class-wp-site-health.php:609
+msgid "Your site does not have any installed themes."
+msgstr "Na webu nejsou nainstalovány žádné šablony."
+
+#: wp-admin/includes/class-wp-site-health.php:441
+msgid "Your site does not have any active plugins."
+msgstr "Na webu nejsou nainstalovány žádné pluginy."
 
 #. translators: 1: Plugin name, 2: Version number, 3: Plugin URL.
 #: wp-admin/includes/class-wp-automatic-updater.php:1123
