@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Komentáře: Test	</title>
-	<atom:link href="https://ryslavyvaclav.github.io/2022/11/26/test/feed/" rel="self" type="application/rss+xml" />
-	<link>https://ryslavyvaclav.github.io/2022/11/26/test/</link>
+	Komentáře: Test 2	</title>
+	<atom:link href="https://ryslavyvaclav.github.io/2022/11/26/test-2/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ryslavyvaclav.github.io/2022/11/26/test-2/</link>
 	<description></description>
-	<lastBuildDate>Sat, 26 Nov 2022 19:57:04 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 26 Nov 2022 20:22:10 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
